@@ -2,8 +2,8 @@
   <div>
     <h1>{{title}}</h1>
     <ul>
-   <book-item v-for='book in books':book='book'></book-item>
-</ul>
+      <book-item v-for='book in books' :book='book'></book-item>
+    </ul>
   </div>
 </template>
 
@@ -11,20 +11,19 @@
 import BookItem from './BookItem';
 export default {
   name: 'BookList',
-  components: {
-    BookItem
-  }
   data() {
     return {
       title: 'All Books',
       books: [
-       {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
-       {title: 'American Gods', author: 'Neil Gaiman'},
-       {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
-     ]
+        {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
+        {title: 'American Gods', author: 'Neil Gaiman'},
+        {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
+      ]
     };
   },
-
+  components: {
+    BookItem
+  }
 };
 </script>
 
@@ -35,9 +34,5 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: block;
-  margin: 0 10px;
 }
 </style>
